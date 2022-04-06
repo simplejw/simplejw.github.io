@@ -12,3 +12,5 @@ nav_order: 1
 进入容器 bash
 
 `docker-compose exec {service_name} bash`
+
+`docker exec -it {container_id} bash`
