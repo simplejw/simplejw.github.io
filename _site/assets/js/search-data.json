@@ -143,72 +143,96 @@
     "url": "http://0.0.0.0:4000/docs/component/code.html",
     "relUrl": "/docs/component/code.html"
   },"24": {
-    "doc": "Git",
-    "title": "Git",
-    "content": " ",
-    "url": "http://0.0.0.0:4000/docs/git/",
-    "relUrl": "/docs/git/"
+    "doc": "Database",
+    "title": "Docker 部署 Mysql Mongo",
+    "content": ". | docker-compose.yml 文件 | . # Use root/example as user/password credentials version: '3.1' services: web_mysql: image: mysql:5.7 command: --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_general_ci restart: always environment: MYSQL_ROOT_PASSWORD: example TZ: Asia/Shanghai command: mysqld --sql_mode=\"\" ports: - 3306:3306 volumes: - ./mysql/etc:/etc/mysql - ./mysql/conf.d:/etc/mysql/conf.d - ./mysql/data:/var/lib/mysql - ./mysql/log:/var/log/mysql networks: - net-database web_mongo: image: mongo:4.4 environment: MONGO_INITDB_ROOT_USERNAME: root MONGO_INITDB_ROOT_PASSWORD: example ports: - 27017:27017 volumes: - ./mongo/db:/data/db - ./mongo/log:/var/log/mongodb - ./mongo/etc:/etc/mongo networks: - net-database networks: # net-mysql: # net-mongo: net-database: . ",
+    "url": "http://0.0.0.0:4000/docs/docker/database.html#docker-%E9%83%A8%E7%BD%B2-mysql-mongo",
+    "relUrl": "/docs/docker/database.html#docker-部署-mysql-mongo"
   },"25": {
+    "doc": "Database",
+    "title": "Database",
+    "content": " ",
+    "url": "http://0.0.0.0:4000/docs/docker/database.html",
+    "relUrl": "/docs/docker/database.html"
+  },"26": {
     "doc": "Go",
     "title": "Go",
     "content": " ",
     "url": "http://0.0.0.0:4000/docs/golang/",
     "relUrl": "/docs/golang/"
-  },"26": {
-    "doc": "Java",
-    "title": "Java",
-    "content": " ",
-    "url": "http://0.0.0.0:4000/docs/java/",
-    "relUrl": "/docs/java/"
   },"27": {
+    "doc": "Git",
+    "title": "Git",
+    "content": " ",
+    "url": "http://0.0.0.0:4000/docs/git/",
+    "relUrl": "/docs/git/"
+  },"28": {
     "doc": "Welcome to Jekyll",
     "title": "Welcome to Jekyll",
     "content": "You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated. Jekyll requires blog post files to be named according to the following format: . YEAR-MONTH-DAY-title.MARKUP . Where YEAR is a four-digit number, MONTH and DAY are both two-digit numbers, and MARKUP is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works. Jekyll also offers powerful support for code snippets: . def print_hi(name) puts \"Hi, #{name}\" end print_hi('Tom') #=&gt; prints 'Hi, Tom' to STDOUT. Check out the Jekyll docs for more info on how to get the most out of Jekyll. File all bugs/feature requests at Jekyll’s GitHub repo. If you have questions, you can ask them on Jekyll Talk. ",
     "url": "http://0.0.0.0:4000/docs/component/",
     "relUrl": "/docs/component/"
-  },"28": {
+  },"29": {
+    "doc": "Java",
+    "title": "Java",
+    "content": " ",
+    "url": "http://0.0.0.0:4000/docs/java/",
+    "relUrl": "/docs/java/"
+  },"30": {
     "doc": "Docker",
     "title": "Docker",
-    "content": "进入容器 bash . docker-compose exec {service_name} bash . ",
+    "content": "进入容器 bash . docker-compose exec {service_name} bash . docker exec -it {container_id} bash . ",
     "url": "http://0.0.0.0:4000/docs/docker/",
     "relUrl": "/docs/docker/"
-  },"29": {
+  },"31": {
     "doc": "Issue",
     "title": "GitHub 问题",
     "content": ". | git push失败 | . git@github.com: Permission denied (publickey). fatal: Could not read from remote repository. Please make sure you have the correct access rights and the repository exists. | 解决方案：link | . ",
     "url": "http://0.0.0.0:4000/docs/git/issue.html#github-%E9%97%AE%E9%A2%98",
     "relUrl": "/docs/git/issue.html#github-问题"
-  },"30": {
+  },"32": {
     "doc": "Issue",
     "title": "Issue",
     "content": " ",
     "url": "http://0.0.0.0:4000/docs/git/issue.html",
     "relUrl": "/docs/git/issue.html"
-  },"31": {
+  },"33": {
     "doc": "MyBatis",
     "title": "mybatis 生成代码工具",
     "content": ". | mybatis-generator-gui | . Mapper 接口类需要加 @Mapper 注解！！！ . XljMemberExample xljMemberExample = new XljMemberExample(); xljMemberExample.createCriteria().andOpenIdEqualTo(jsCode).andIsDelEqualTo(false); List&lt;XljMember&gt; memberList = xljMemberMapper.selectByExample(xljMemberExample); . ",
     "url": "http://0.0.0.0:4000/docs/java/mybatis.html#mybatis-%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E5%B7%A5%E5%85%B7",
     "relUrl": "/docs/java/mybatis.html#mybatis-生成代码工具"
-  },"32": {
+  },"34": {
     "doc": "MyBatis",
     "title": "获取自增ID",
     "content": "xml sql标签新增属性 . keyProperty=\"recordList.id\" useGeneratedKeys=\"true\" . 取的时候 . Long last_insert_id = someObject.getId(); . ",
     "url": "http://0.0.0.0:4000/docs/java/mybatis.html#%E8%8E%B7%E5%8F%96%E8%87%AA%E5%A2%9Eid",
     "relUrl": "/docs/java/mybatis.html#获取自增id"
-  },"33": {
+  },"35": {
     "doc": "MyBatis",
     "title": "MyBatis",
     "content": " ",
     "url": "http://0.0.0.0:4000/docs/java/mybatis.html",
     "relUrl": "/docs/java/mybatis.html"
-  },"34": {
+  },"36": {
+    "doc": "PHP",
+    "title": "Docker 部署 PHP Nginx Radis",
+    "content": ". | 目录结构 | . dnp ├── nginx │ └── certs/ │ └── conf/ │ └── log/ │ └── certs/ │ └── Dockerfile │ │ ├── php-fpm │ └── tmp/ │ └── php.ini │ └── www.conf │ └── Dockerfile │ │ ├── redis │ └── redis.conf │ └── Dockerfile │ │ ├── www/ │ │ └── docker-compose.yml . | docker-compose.yml 文件 | . version: '3' services: web_nginx: build: ./nginx ports: - \"80:80\" - \"443:443\" volumes: # source - ./www/:/usr/share/nginx/html/ - ./nginx/log/:/var/log/nginx/:rw - ./nginx/certs/:/etc/ssl/certs/:ro - ./nginx/conf/:/etc/nginx/conf.d/:ro networks: - frontend web_php_fpm: build: ./php-fpm expose: - \"9000\" - \"9003\" volumes: - ./php-fpm/php.ini:/usr/local/etc/php/php.ini:ro - ./php-fpm/www.conf:/usr/local/etc/php-fpm.d/www.conf:ro - ./php-fpm/tmp/:/tmp/ - ./www/:/usr/share/nginx/html/ networks: - frontend - backend web_redis: build: ./redis ports: - \"6379:6379\" volumes: # source - ./redis/redis.conf:/usr/local/etc/redis/redis.conf:ro networks: - backend elasticsearch: image: elasticsearch:7.8.1 container_name: elasticsearch_781 environment: - node.name=es-node - cluster.name=es-cluster - discovery.type=single-node volumes: - ./elasticsearch/esdata:/usr/share/elasticsearch/data ports: - 9200:9200 - 9300:9300 networks: - frontend kibana: image: kibana:7.8.1 container_name: kibana_781 ports: - 5601:5601 networks: - frontend networks: frontend: backend: external: name: database_net-database . ",
+    "url": "http://0.0.0.0:4000/docs/docker/php.html#docker-%E9%83%A8%E7%BD%B2-php-nginx-radis",
+    "relUrl": "/docs/docker/php.html#docker-部署-php-nginx-radis"
+  },"37": {
+    "doc": "PHP",
+    "title": "PHP",
+    "content": " ",
+    "url": "http://0.0.0.0:4000/docs/docker/php.html",
+    "relUrl": "/docs/docker/php.html"
+  },"38": {
     "doc": "Swagger",
     "title": "springboot + swagger",
     "content": "版本： . | gradle . | ‘org.springframework.boot’ version ‘2.5.8’ . | ‘io.springfox:springfox-boot-starter:3.0.0’ . | . 步骤： . | gradle 引入 springfox | . implementation 'io.springfox:springfox-boot-starter:3.0.0' . | 加swagger配置 | . package com.example.demo; import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty; import org.springframework.context.annotation.Bean; import org.springframework.context.annotation.Configuration; import springfox.documentation.builders.ApiInfoBuilder; import springfox.documentation.builders.PathSelectors; import springfox.documentation.builders.RequestHandlerSelectors; import springfox.documentation.service.ApiInfo; import springfox.documentation.service.Contact; import springfox.documentation.spi.DocumentationType; import springfox.documentation.spring.web.plugins.Docket; import springfox.documentation.swagger2.annotations.EnableSwagger2; @Configuration @EnableSwagger2 @ConditionalOnProperty(name = \"swagger.enable\", havingValue = \"true\") public class SwaggerConfig { // controller package path 包路径 private static final String controllerPath = \"com.example.demo.controller\"; @Bean public Docket createRestApi() { return new Docket(DocumentationType.SWAGGER_2) .apiInfo(apiInfo()) .select() .apis(RequestHandlerSelectors.basePackage(controllerPath)) .paths(PathSelectors.any()) .build(); } private ApiInfo apiInfo() { return new ApiInfoBuilder() .title(\"Spring Boot + Swagger2 =&gt; RestFul API\") .contact(new Contact(\"Nemo\", \"www.baidu.com\", \"my@eamil.com\")) .version(\"1.0\") .description(\"API Desc\") .build(); } } . | application.properties 配置 | . #是否激活 swagger true or false swagger.enable=true . | 效果 | . http://localhost:8080/swagger-ui/index.html . ",
     "url": "http://0.0.0.0:4000/docs/java/swagger.html#springboot--swagger",
     "relUrl": "/docs/java/swagger.html#springboot--swagger"
-  },"35": {
+  },"39": {
     "doc": "Swagger",
     "title": "Swagger",
     "content": " ",
