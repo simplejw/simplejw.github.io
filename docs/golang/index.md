@@ -6,3 +6,13 @@ categories: go doc
 has_children: true
 nav_order: 1
 ---
+
+# 配置go环境变量
+---
+
+vim .zshrc
+```shell
+export PATH=$PATH:/usr/local/go/bin
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+```
