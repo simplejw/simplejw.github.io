@@ -65,6 +65,7 @@ nav_order: 2
 5. 针对未发布的模块代码进行开发和测试
 
 	```go
+	// vim mod file
 	module example.com/mymodule
 
 	go 1.16
@@ -74,10 +75,16 @@ nav_order: 2
 	replace example.com/theirmodule v0.0.0-unpublished => ../theirmodule
 
 
-	//设置 require/replace 对时，使用 go mod edit 和 go get 命令确保文件描述的需求保持一致
+	// 设置 require/replace 对时，使用 go mod edit 和 go get 命令确保文件描述的需求保持一致
 	go mod edit -replace=example.com/theirmodule@v0.0.0-unpublished=../theirmodule
     
     go get -d example.com/theirmodule@v0.0.0-unpublished
+
+
+    // 命令行设置本地包 引入greetings本地包
+    go mod edit -replace example.com/greetings=../greetings
+
+    go mod tidy
 	```
 
 
