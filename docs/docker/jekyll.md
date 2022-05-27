@@ -30,3 +30,5 @@ services:
       - 35729:35729
 
 ```
+
+**Note:** YML格式; remote_theme 和 theme;
