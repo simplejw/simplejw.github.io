@@ -31,4 +31,8 @@ services:
 
 ```
 
-**Note:** YML格式; remote_theme 和 theme;
+**Note:** 
+- YML格式
+- remote_theme 和 theme
+- ruby > 3.0 ? Gemfile 添加 `gem "webrick"`
+
