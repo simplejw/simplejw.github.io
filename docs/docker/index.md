@@ -9,8 +9,18 @@ nav_order: 1
 
 
 
-进入容器 bash
+# Docker 常用命令
+--------
+
+1. 进入容器 bash
 
 `docker-compose exec {service_name} bash`
 
 `docker exec -it {container_id} bash`
+
+
+2. 执行PHP脚本
+```bash
+docker run -it --rm --name my-running-script -d -v "$PWD":/usr/share/nginx/html/default -w /usr/share/nginx/html/default dnp_web_php72_fpm(images name) php ./yii queue/listen
+# Supervisord 去除 -it -d 参数
+```
