@@ -24,3 +24,9 @@ nav_order: 1
 docker run -it --rm --name my-running-script -d -v "$PWD":/usr/share/nginx/html/default -w /usr/share/nginx/html/default dnp_web_php72_fpm(images name) php ./yii queue/listen
 # Supervisord 去除 -it -d 参数
 ```
+
+
+3. 容器服务连接宿主机 connect from a container to a service on the host
+
+> You can also reach the gateway using [`gateway.docker.internal`](https://docs.docker.com/desktop/networking/)
+
