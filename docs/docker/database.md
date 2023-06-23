@@ -13,23 +13,24 @@ nav_order: 3
 
 - docker-compose.yml 文件
 
-```
+```yml
 # Use root/example as user/password credentials
 version: '3.1'
 
 services:
 
   web_mysql:
-    image: mysql:5.7
+    image: mysql:8
     command: 
       --default-authentication-plugin=mysql_native_password
       --character-set-server=utf8mb4
       --collation-server=utf8mb4_general_ci
+      --sql_mode=""
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: example
       TZ: Asia/Shanghai
-    command: mysqld --sql_mode=""
+    # command: mysqld --sql_mode=""
     ports:
       - 3306:3306
     volumes:
@@ -37,12 +38,13 @@ services:
       - ./mysql/conf.d:/etc/mysql/conf.d
       - ./mysql/data:/var/lib/mysql 
       - ./mysql/log:/var/log/mysql
+      # - ./mysql-files:/var/lib/mysql-files
     networks:
         - net-database
 
 
   web_mongo:
-    image: mongo:4.4
+    image: mongo:latest
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example

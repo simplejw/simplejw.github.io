@@ -20,7 +20,6 @@ dnp
 │   └── conf/
 │   └── log/
 │   └── certs/
-│   └── Dockerfile
 │ 
 │ 
 ├── php-fpm
@@ -32,7 +31,6 @@ dnp
 │ 
 ├── redis
 │   └── redis.conf
-│   └── Dockerfile
 │ 
 │ 
 ├── www/
@@ -43,11 +41,12 @@ dnp
 
 - docker-compose.yml 文件
 
-```
+```yml
 version: '3'
 services:
   web_nginx:
-    build: ./nginx
+    # build: ./nginx
+    image: nginx:1.24
     ports:
       - "80:80"
       - "443:443"
@@ -62,9 +61,10 @@ services:
 
   web_php_fpm:
     build: ./php-fpm
+    # image: dnp_web_php_fpm:latest
     expose:
       - "9000"
-      - "9003"
+      # - "9003"
     volumes:
       - ./php-fpm/php.ini:/usr/local/etc/php/php.ini:ro
       - ./php-fpm/www.conf:/usr/local/etc/php-fpm.d/www.conf:ro
@@ -73,9 +73,11 @@ services:
     networks:
         - frontend
         - backend
+        - database_net-database
 
   web_redis:
-    build: ./redis
+    # build: ./redis
+    image: redis:7.0
     ports:
       - "6379:6379"
     volumes:
@@ -110,8 +112,8 @@ services:
 networks:
   frontend:
   backend:
-    external:
-      name: database_net-database
+  database_net-database:
+    external: true
 ```
 
 

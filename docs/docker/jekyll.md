@@ -14,7 +14,7 @@ nav_order: 3
 - docker-compose.yml 文件
 
 
-```
+```yml
 version: '3'
 
 services:
