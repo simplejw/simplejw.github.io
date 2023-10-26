@@ -31,6 +31,8 @@ nav_order: 1
 
 	> You can also reach the gateway using [`gateway.docker.internal`](https://docs.docker.com/desktop/networking/)
 
+	> Linux `172.17.0.1:3306` 
+
 
 
 4. 构建个人镜像仓库
