@@ -34,8 +34,29 @@ nav_order: 1
 	> Linux `172.17.0.1:3306` 
 
 
+4. 构建Docker Hub镜像仓库
+	```shell
+	# 登录
+	docker login
 
-4. 构建个人镜像仓库
+	# 镜像打标签
+	# docker tag dnp_web_nginx:latest simplejw/dnp_web_nginx:latest
+	docker tag <本地镜像名称>:<本地镜像版本号> <远程空间名称>/<远程镜像名称>:<远程镜像版本号>
+
+	# 推送镜像至Docker Hub镜像仓库
+	# docker push simplejw/dnp_web_nginx:latest
+	docker push <远程空间名称>/<远程镜像名称>:<远程镜像版本号>
+
+	# 拉取镜像
+	# docker pull simplejw/dnp_web_nginx:latest
+	docker pull <远程空间名称>/<远程镜像名称>:<远程镜像版本号>
+
+	# 删除本地镜像
+	# docker image rm simplejw/dnp_web_nginx:latest
+	docker image rm <本地镜像名称>:<本地镜像版本号>
+	```
+
+5. 构建阿里云个人镜像仓库
 	```shell
 	# 登录镜像仓库
 	docker login --username=<镜像仓库登录名> registry.cn-<个人版实例所在的地域>.aliyuncs.com
