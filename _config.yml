@@ -55,3 +55,17 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+permalink: pretty
+
+# For copy button on code
+enable_copy_code_button: true
+
+
+gitalk:
+  enable: true
+  clientId: 6528b5bfa8215216d96b
+  clientSecret: 20a12737fb1bd393d7199f799be4ff95c070f4ab
+  repo: jekyll-talk
+  owner: simplejw
+  admin: simplejw
