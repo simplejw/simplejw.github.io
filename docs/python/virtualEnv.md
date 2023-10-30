@@ -53,14 +53,13 @@ nav_order: 2
 <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 <script>
     var gitalk = new Gitalk({
+    	id: window.location.pathname,
+    	repo: 'jekyll-talk',
         clientID: '6528b5bfa8215216d96b',
         clientSecret: '20a12737fb1bd393d7199f799be4ff95c070f4ab',
-        repo: 'jekyll-talk',
         owner: 'simplejw',
         admin: ['simplejw'],
-        id: window.location.pathname,
-        proxy: 'https://github.com/login/oauth/access_token'
-        distractionFreeMode: true
+        proxy: 'https://record.tanyuan-solar.com/login/oauth/access_token'
     });
     gitalk.render('gitalk-container')
 </script> 
