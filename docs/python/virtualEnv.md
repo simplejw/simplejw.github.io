@@ -59,6 +59,7 @@ nav_order: 2
         owner: 'simplejw',
         admin: ['simplejw'],
         id: window.location.pathname,
+        proxy: 'https://github.com/login/oauth/access_token'
         distractionFreeMode: true
     });
     gitalk.render('gitalk-container')
