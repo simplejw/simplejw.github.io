@@ -47,3 +47,19 @@ nav_order: 2
 	deactivate            #退出环境
 	workon                #列出所有环境
 	````
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<div id="gitalk-container"></div>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    var gitalk = new Gitalk({
+        clientID: '6528b5bfa8215216d96b',
+        clientSecret: '20a12737fb1bd393d7199f799be4ff95c070f4ab',
+        repo: 'jekyll-talk',
+        owner: 'simplejw',
+        admin: ['simplejw'],
+        id: window.location.pathname,
+        distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container')
+</script> 
