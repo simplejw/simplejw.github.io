@@ -25,9 +25,11 @@ description: >- # this means to ignore newlines until "baseurl:"
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "https://simplejw.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+
+repository: simplejw/simplejw.github.io # for github-metadata
+# twitter_username: jekyllrb
+# github_username:  jekyll
 
 # Build settings
 remote_theme: just-the-docs/just-the-docs
@@ -61,6 +63,9 @@ permalink: pretty
 # For copy button on code
 enable_copy_code_button: true
 
+# Back to top link
+back_to_top: true
+back_to_top_text: "Back to top"
 
 gitalk:
   enable: true
