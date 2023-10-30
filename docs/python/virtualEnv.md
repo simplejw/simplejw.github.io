@@ -58,8 +58,7 @@ nav_order: 2
         clientID: '6528b5bfa8215216d96b',
         clientSecret: '20a12737fb1bd393d7199f799be4ff95c070f4ab',
         owner: 'simplejw',
-        admin: ['simplejw'],
-        proxy: 'https://record.tanyuan-solar.com/login/oauth/access_token'
+        admin: ['simplejw']
     });
     gitalk.render('gitalk-container')
 </script> 
