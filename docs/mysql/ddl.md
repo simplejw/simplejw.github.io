@@ -20,12 +20,7 @@ nav_order: 2
 	ALTER TABLE table_name RENAME COLUMN old_column_name TO new_column_name
 	```
 
-3. 同一个表中的一个字段的值复制给另一个字段
-	```sql
-	UPDATE purchase SET price_t = price WHERE id <= 20
-	```
-
-4. 外键约束
+3. 外键约束
 
 > **CASCADE** ：删除或更新父表中的行，并自动删除或更新子表中匹配的行。支持 ON DELETE CASCADE 和 ON UPDATE CASCADE。在两个表之间，不要定义多个作用于父表或子表中的同一列的 ON UPDATE CASCADE 子句。
 
