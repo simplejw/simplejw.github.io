@@ -21,3 +21,14 @@ nav_order: 3
 
 	UPDATE student AS s SET s.name = (SELECT name from city WHERE id = s.id)
 	```
+
+3. 两表求差集
+	```sql
+	SELECT
+		s.num 
+	FROM
+		schedul AS s
+		LEFT JOIN record AS r ON s.num = r.num 
+	WHERE
+		r.num IS NULL 
+	```
