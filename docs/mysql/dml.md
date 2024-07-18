@@ -32,3 +32,25 @@ nav_order: 3
 	WHERE
 		r.num IS NULL 
 	```
+
+4. DISTINCT 和 GROUP BY 并存
+	```sql
+	SELECT DISTINCT
+	    code
+	FROM
+	    (
+	    SELECT
+	        code,
+	        id,
+	        COUNT(id)
+	    FROM
+	        `table`
+	    WHERE
+	        `deleted_at` IS NULL
+	    GROUP BY
+	        code,
+	        id
+	    HAVING
+	        COUNT(id) > 1
+	) AS t1
+	```
